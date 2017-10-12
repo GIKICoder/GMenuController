@@ -5,7 +5,7 @@ GMenuController
 
 介绍
 ==============
-具有和系统UIMenuController行为一致的UI控件.相比UIMenuController.具有更加友好的使用方式.
+具有和系统UIMenuController行为,交互一致的UI控件.相比UIMenuController.具有更加友好的使用方式.
 (该项目是 [GRichLabel](https://github.com/GIKICoder/GRichLabel) 文本选择复制功能的组件之一)
 
 
@@ -37,9 +37,12 @@ self.arr = @[item1,item2,item3,item4,item5];
 
 ### Demo
 
-
-<img src="https://github.com/GIKICoder/GMenuController/tree/master/snapshot/demo1.png" width="320">
-<img src="https://github.com/GIKICoder/GMenuController/tree/master/snapshot/demo2.png" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo1.png" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo2.png" width="320">
 <br/> <br/>
-<img src="https://github.com/GIKICoder/GMenuController/tree/master/snapshot/demo3.png" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo3.png" width="320">
+<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/selectCopy.png" width="400">
+<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/novelReader.png" width="400">
+
+
 
