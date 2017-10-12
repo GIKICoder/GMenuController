@@ -5,7 +5,7 @@ GMenuController
 
 介绍
 ==============
-具有和系统UIMenuController行为一致的UI控件.相比UIMenuController.具有更加友好的使用方式.
+具有和系统UIMenuController行为,交互一致的UI控件.相比UIMenuController.具有更加友好的使用方式.
 (该项目是 [GRichLabel](https://github.com/GIKICoder/GRichLabel) 文本选择复制功能的组件之一)
 
 
