@@ -37,10 +37,8 @@ self.arr = @[item1,item2,item3,item4,item5];
 
 ### Demo
 
-<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo1.png" width="320">
-<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo2.png" width="320">
-<br/> <br/>
-<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo3.png" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo0.gif" width="320">
+
 <img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/selectCopy.png" width="400">
 <img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/novelReader.png" width="400">
 
