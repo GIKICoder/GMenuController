@@ -232,7 +232,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
     if (needResetLayout) {
         self.frame = (CGRect){{0,0},{totalWidth,self.maxSize.height}};
         self.contentView.frame = (CGRect){{0,0},{totalWidth,self.maxSize.height-_arrowSize.height}};
-        
+        [self setCorrectDirection:_CorrectDirection];
     }
     self.totalCount = index;
     [self.pageCounts addObject:@(self.totalCount)];
