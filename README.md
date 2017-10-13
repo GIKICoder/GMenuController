@@ -13,7 +13,7 @@ GMenuController
 ==============
 - API与UIMenuController一致.
 - 支持MenuItem指定target.使用更加灵活
-- 无需对添加MenuController的控件指定相应者等行为.
+- 无需对添加MenuController的控件 添加canBecomeFirstResponder等行为.
 - 相比UIMenuController. GMenuController具有更加简单,友好的使用方式.
 
 用法
