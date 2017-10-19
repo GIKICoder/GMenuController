@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0893341F98912D0073946D /* GAdjustButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0893321F98912D0073946D /* GAdjustButton.m */; };
 		2BF0200B1F8E56A200D4A5CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0200A1F8E56A200D4A5CA /* main.m */; };
 		2BF0200E1F8E56A200D4A5CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0200D1F8E56A200D4A5CA /* AppDelegate.m */; };
 		2BF020111F8E56A200D4A5CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020101F8E56A200D4A5CA /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0893321F98912D0073946D /* GAdjustButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAdjustButton.m; sourceTree = "<group>"; };
+		2B0893331F98912D0073946D /* GAdjustButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAdjustButton.h; sourceTree = "<group>"; };
 		2BF020061F8E56A200D4A5CA /* GMenuControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMenuControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF0200A1F8E56A200D4A5CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BF0200C1F8E56A200D4A5CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 		2BF0203F1F8E56BA00D4A5CA /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				2B0893331F98912D0073946D /* GAdjustButton.h */,
+				2B0893321F98912D0073946D /* GAdjustButton.m */,
 				2BF020401F8E56BA00D4A5CA /* GMenuDefaultView.h */,
 				2BF020411F8E56BA00D4A5CA /* GMenuDefaultView.m */,
 				2BF020421F8E56BA00D4A5CA /* GMenuEffectsWindow.h */,
@@ -312,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0893341F98912D0073946D /* GAdjustButton.m in Sources */,
 				2BF020461F8E56BA00D4A5CA /* GMenuController.m in Sources */,
 				2BF020491F8E56BA00D4A5CA /* GMenuViewContainer.m in Sources */,
 				2BF020481F8E56BA00D4A5CA /* GMenuEffectsWindow.m in Sources */,
@@ -556,6 +562,7 @@
 				2BF020351F8E56A200D4A5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BF020361F8E56A200D4A5CA /* Build configuration list for PBXNativeTarget "GMenuControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +571,7 @@
 				2BF020381F8E56A200D4A5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BF020391F8E56A200D4A5CA /* Build configuration list for PBXNativeTarget "GMenuControllerExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +580,7 @@
 				2BF0203B1F8E56A200D4A5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
