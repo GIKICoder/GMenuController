@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2B0893341F98912D0073946D /* GAdjustButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0893321F98912D0073946D /* GAdjustButton.m */; };
+		2B08935C1F98B0900073946D /* GWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B08935B1F98B0900073946D /* GWebViewController.m */; };
+		2B08935F1F98B3EC0073946D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B08935E1F98B3EC0073946D /* WebKit.framework */; };
+		2B0893621F98B66A0073946D /* GWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0893611F98B66A0073946D /* GWKWebView.m */; };
 		2BF0200B1F8E56A200D4A5CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0200A1F8E56A200D4A5CA /* main.m */; };
 		2BF0200E1F8E56A200D4A5CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0200D1F8E56A200D4A5CA /* AppDelegate.m */; };
 		2BF020111F8E56A200D4A5CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020101F8E56A200D4A5CA /* ViewController.m */; };
@@ -43,6 +46,11 @@
 		2B0893321F98912D0073946D /* GAdjustButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAdjustButton.m; sourceTree = "<group>"; };
 		2B0893331F98912D0073946D /* GAdjustButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAdjustButton.h; sourceTree = "<group>"; };
 		2B0893351F989F020073946D /* GMenuControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMenuControllerHeader.h; sourceTree = "<group>"; };
+		2B08935A1F98B08F0073946D /* GWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWebViewController.h; sourceTree = "<group>"; };
+		2B08935B1F98B0900073946D /* GWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWebViewController.m; sourceTree = "<group>"; };
+		2B08935E1F98B3EC0073946D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2B0893601F98B66A0073946D /* GWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWKWebView.h; sourceTree = "<group>"; };
+		2B0893611F98B66A0073946D /* GWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWKWebView.m; sourceTree = "<group>"; };
 		2BF020061F8E56A200D4A5CA /* GMenuControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMenuControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF0200A1F8E56A200D4A5CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BF0200C1F8E56A200D4A5CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B08935F1F98B3EC0073946D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B08935D1F98B3EB0073946D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B08935E1F98B3EC0073946D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BF01FFD1F8E56A200D4A5CA = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 				2BF020221F8E56A200D4A5CA /* GMenuControllerExampleTests */,
 				2BF0202D1F8E56A200D4A5CA /* GMenuControllerExampleUITests */,
 				2BF020071F8E56A200D4A5CA /* Products */,
+				2B08935D1F98B3EB0073946D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +140,10 @@
 				2BF0200D1F8E56A200D4A5CA /* AppDelegate.m */,
 				2BF0200F1F8E56A200D4A5CA /* ViewController.h */,
 				2BF020101F8E56A200D4A5CA /* ViewController.m */,
+				2B08935A1F98B08F0073946D /* GWebViewController.h */,
+				2B08935B1F98B0900073946D /* GWebViewController.m */,
+				2B0893601F98B66A0073946D /* GWKWebView.h */,
+				2B0893611F98B66A0073946D /* GWKWebView.m */,
 				2BF020121F8E56A200D4A5CA /* Main.storyboard */,
 				2BF020151F8E56A200D4A5CA /* Assets.xcassets */,
 				2BF020171F8E56A200D4A5CA /* LaunchScreen.storyboard */,
@@ -319,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B08935C1F98B0900073946D /* GWebViewController.m in Sources */,
 				2B0893341F98912D0073946D /* GAdjustButton.m in Sources */,
 				2BF020461F8E56BA00D4A5CA /* GMenuController.m in Sources */,
 				2BF020491F8E56BA00D4A5CA /* GMenuViewContainer.m in Sources */,
@@ -327,6 +350,7 @@
 				2BF0200E1F8E56A200D4A5CA /* AppDelegate.m in Sources */,
 				2BF020471F8E56BA00D4A5CA /* GMenuDefaultView.m in Sources */,
 				2BF0200B1F8E56A200D4A5CA /* main.m in Sources */,
+				2B0893621F98B66A0073946D /* GWKWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

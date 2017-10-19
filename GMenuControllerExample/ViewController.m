@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GMenuController.h"
+#import "GWebViewController.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSArray  *arr1;
 @property (nonatomic, strong) NSArray  *arr2;
@@ -114,6 +115,11 @@
     [[GMenuController sharedMenuController] setMenuItems:self.arr4];
     [[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
     [[GMenuController sharedMenuController] setMenuVisible:YES];
+}
+
+- (IBAction)jumpController:(id)sender {
+    GWebViewController * vc = [[GWebViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)test{
