@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, GMenuControllerArrowDirection) {
     GMenuControllerArrowDown ,     // Forced down
 };
 
-@class GMenuItem;
+@class GMenuItem,GMenuViewContainer;
 
 @interface GMenuController : NSObject
 
@@ -37,6 +37,8 @@ typedef NS_ENUM(NSUInteger, GMenuControllerArrowDirection) {
 
 @property(nonatomic,readonly) CGRect menuFrame;
 
+@property (nonatomic, strong,readonly) GMenuViewContainer * menuContainer;
+
 @end
 
 UIKIT_EXTERN NSNotificationName const GMenuControllerWillShowMenuNotification;
@@ -50,8 +52,9 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @interface GMenuItem : NSObject
 - (instancetype)initWithTitle:(NSString *)title target:(id)target action:(SEL)action;
-
+- (instancetype)initWithTitle:(NSString *)title image:(UIImage*)image target:(id)target action:(SEL)action;
 @property(nonatomic,copy) NSString *title;
+@property (nonatomic, strong) UIImage * image;
 @property (nonatomic, strong) id target;
 @property(nonatomic)      SEL       action;
 @end

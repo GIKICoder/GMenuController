@@ -40,6 +40,10 @@
 
 - (IBAction)btn1:(UIButton*)sender {
     
+    GMenuItem *item1 = [[GMenuItem alloc] initWithTitle:@"选择" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+    GMenuItem *item2 = [[GMenuItem alloc] initWithTitle:@"复制" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+    GMenuItem *item3 = [[GMenuItem alloc] initWithTitle:@"全选" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+     self.arr1 = @[item1,item2,item3];
     [[GMenuController sharedMenuController] setMenuItems:self.arr1];
     [[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
     [[GMenuController sharedMenuController] setMenuVisible:YES];

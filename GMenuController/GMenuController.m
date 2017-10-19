@@ -20,7 +20,7 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
 {
     BOOL _showMenu;
 }
-@property (nonatomic, strong) GMenuViewContainer * menuContainer;
+@property (nonatomic, strong,readwrite) GMenuViewContainer * menuContainer;
 @property (nonatomic, weak) UIView * targetView;
 @end
 
@@ -125,6 +125,18 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
         self.title = title;
         self.target = target;
         self.action = action;
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title image:(UIImage*)image target:(id)target action:(SEL)action
+{
+    self = [super init];
+    if (self) {
+        self.title = title;
+        self.target = target;
+        self.action = action;
+        self.image = image;
     }
     return self;
 }

@@ -37,6 +37,8 @@ static inline CGPoint GMenuGetXCenter(CGRect rect) {
         _cornerRadius = 6;
         _arrowDirection = GMenuControllerArrowDefault;
         _arrowSize = CGSizeMake(17, 9.7);
+        _menuItemFont = [UIFont systemFontOfSize:14];
+        _imagePosition = GAdjustButtonIMGPositionLeft;
         _arrowMargin = 5.5;
         _menuEdgeInset = UIEdgeInsetsMake(10, 10, 10, 10);
         _menuViewHeight = 45.34;
