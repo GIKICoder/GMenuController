@@ -189,6 +189,9 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
              test.frame = CGRectMake(0, 0, itemW, self.maxSize.height-_arrowSize.height);
              CGFloat imageW = test.imageView.frame.size.width;
              itemW +=imageW;
+            if (itemW > maxWidth) {
+                itemW = maxWidth;
+            }
         }
         totalWidth += itemW;
         if ((totalWidth > maxWidth) && (totalWidth - maxWidth) > kTitleMargin) {
@@ -275,8 +278,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         UIImage *image = [[self class] createTriangleImageWithSize:CGSizeMake(kTriangleWidth, kTriangleHeight) tintColor:nil isRight:NO];
         [moreleft setImage:image forState:UIControlStateNormal];
         [self.contentView addSubview:moreleft];
-        
-        
+
         UIView *line = [UIView new];
         line.backgroundColor = [UIColor whiteColor];
         [self addSubview:line];
@@ -291,6 +293,16 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
     [array enumerateObjectsUsingBlock:^(GMenuItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CGFloat maxWidth = (self.maxSize.width-kMoreWidth*2);
         CGFloat itemW = [ws calculateTextSize:obj maxWidth:maxWidth].width + kTitleMargin*2;
+        if (obj.image && (self.container.imagePosition == GAdjustButtonIMGPositionLeft || self.container.imagePosition == GAdjustButtonIMGPositionRight)) {
+            GMenuItemDefaultView *test = [GMenuItemDefaultView buttonWithType:UIButtonTypeCustom];
+            [test setImage:obj.image forState:UIControlStateNormal];
+            test.frame = CGRectMake(0, 0, itemW, self.maxSize.height-_arrowSize.height);
+            CGFloat imageW = test.imageView.frame.size.width;
+            itemW +=imageW;
+            if (itemW > maxWidth) {
+                itemW = maxWidth;
+            }
+        }
         totalWidth += itemW;
         
         if (totalWidth > maxWidth) {
@@ -303,8 +315,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
     }];
     
     if (newMenuArray.count == 0) return;
-    
-    
+
     __block CGFloat lastWidth = kMoreWidth;
     CGFloat averageWidth = (menuWidth - totalWidth)/newMenuArray.count;
     [newMenuArray enumerateObjectsUsingBlock:^(GMenuItem *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -316,6 +327,9 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
             test.frame = CGRectMake(0, 0, itemW, self.maxSize.height-_arrowSize.height);
             CGFloat imageW = test.imageView.frame.size.width;
             itemW +=imageW;
+            if (itemW > maxWidth) {
+                itemW = maxWidth;
+            }
         }
         index = idx+1;
         GMenuItemDefaultView *item = [GMenuItemDefaultView buttonWithType:UIButtonTypeCustom];
@@ -326,7 +340,6 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.contentView addSubview:item];
         if (obj.image) {
-            
             item.imagePosition = self.container.imagePosition;
             [item setImage:obj.image forState:UIControlStateNormal];
         }
@@ -373,7 +386,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
 - (CGSize)calculateTextSize:(GMenuItem*)obj maxWidth:(CGFloat)maxWidth
 {
     NSString *text = obj.title;
-    CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName:self.container.menuItemFont}];
+    CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName:self.container.menuItemFont ?: [UIFont systemFontOfSize:14]}];
     if (textSize.width > (maxWidth-kTitleMargin*2)) {
         return CGSizeMake((maxWidth-kTitleMargin*2), self.maxSize.height-_arrowSize.height);
     }

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GMenuController.h"
 #import "GMenuDefaultView.h"
 #import "GAdjustButton.h"
+
 @interface GMenuViewContainer : UIView
 
 /**
@@ -71,4 +71,5 @@
 
 - (void)processMenuFrame;
 
+- (void)initConfigs;
 @end

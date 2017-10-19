@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GMenuControllerHeader.h"
+#import "GMenuViewContainer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, GMenuControllerArrowDirection) {
-    GMenuControllerArrowDefault, // up or down based on screen location
-    GMenuControllerArrowUp ,       // Forced upward. If the screen is not displayed,  Will do anchor displacement
-    GMenuControllerArrowDown ,     // Forced down
-};
 
 @class GMenuItem,GMenuViewContainer;
 
@@ -35,17 +32,13 @@ typedef NS_ENUM(NSUInteger, GMenuControllerArrowDirection) {
 
 - (void)update;
 
+- (void)reset; /// reset menuViewContrainer configs 
+
 @property(nonatomic,readonly) CGRect menuFrame;
 
-@property (nonatomic, strong,readonly) GMenuViewContainer * menuContainer;
+@property(nonatomic,readonly) GMenuViewContainer * menuViewContainer;
 
 @end
-
-UIKIT_EXTERN NSNotificationName const GMenuControllerWillShowMenuNotification;
-UIKIT_EXTERN NSNotificationName const GMenuControllerDidShowMenuNotification;
-UIKIT_EXTERN NSNotificationName const GMenuControllerWillHideMenuNotification;
-UIKIT_EXTERN NSNotificationName const GMenuControllerDidHideMenuNotification;
-UIKIT_EXTERN NSNotificationName const GMenuControllerMenuFrameDidChangeNotification;
 
 NS_ASSUME_NONNULL_END
 

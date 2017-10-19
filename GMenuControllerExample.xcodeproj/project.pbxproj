@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2B0893321F98912D0073946D /* GAdjustButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAdjustButton.m; sourceTree = "<group>"; };
 		2B0893331F98912D0073946D /* GAdjustButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAdjustButton.h; sourceTree = "<group>"; };
+		2B0893351F989F020073946D /* GMenuControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMenuControllerHeader.h; sourceTree = "<group>"; };
 		2BF020061F8E56A200D4A5CA /* GMenuControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMenuControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF0200A1F8E56A200D4A5CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BF0200C1F8E56A200D4A5CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 			children = (
 				2BF0203D1F8E56BA00D4A5CA /* GMenuController.h */,
 				2BF0203E1F8E56BA00D4A5CA /* GMenuController.m */,
+				2B0893351F989F020073946D /* GMenuControllerHeader.h */,
 				2BF0203F1F8E56BA00D4A5CA /* Internal */,
 			);
 			path = GMenuController;
