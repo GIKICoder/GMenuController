@@ -1,6 +1,6 @@
 //
 //  GMenuDefaultView.m
-//  GMenuControllerExample
+//  GMenuController
 //
 //  Created by GIKI on 2017/9/29.
 //  Copyright © 2017年 GIKI. All rights reserved.
@@ -11,7 +11,7 @@
 #import "GMenuViewContainer.h"
 #import "GAdjustButton.h"
 @interface GMenuItemDefaultView:GAdjustButton
-
+@property (nonatomic, strong) UIColor  *highlightedColor;
 @property (nonatomic, strong) UIImageView  *effectView;
 @end
 @implementation GMenuItemDefaultView
@@ -29,7 +29,7 @@
     UIButton *button = (UIButton *)object;
     if ([keyPath isEqualToString:@"highlighted"]) {
         if (button.highlighted) {
-            [button setBackgroundColor:[UIColor lightGrayColor]];
+            [button setBackgroundColor:self.highlightedColor ? :[UIColor lightGrayColor]];
             return;
         }
         [button setBackgroundColor:[UIColor clearColor]];
@@ -119,7 +119,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         self.container = container;
         self.contentView = [UIView new];
         [self addSubview:self.contentView];
-        
+          self.menuTintColor = self.container.menuItemTintColor;
         self.contentView.layer.cornerRadius = self.container.cornerRadius;
         self.contentView.layer.masksToBounds = YES;
         
@@ -166,6 +166,13 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         CGRect rect = self.contentView.frame;
         rect.origin.y = _arrowSize.height;
         self.contentView.frame = rect;
+        [self.lines enumerateObjectsUsingBlock:^(UIView* line, NSUInteger idx, BOOL * _Nonnull stop) {
+            CGRect rect1 = line.frame;
+            if (CorrectDirection == GMenuControllerArrowDown) {
+                rect1.origin.y = _arrowSize.height;
+                line.frame = rect1;
+            }
+        }];
     }
 }
 
@@ -199,17 +206,18 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
             index = idx;
             if (idx <= (itemsCount-1)) {
                 GMenuItemDefaultView *more = [GMenuItemDefaultView buttonWithType:UIButtonTypeCustom];
+                more.highlightedColor = self.container.menuItemHighlightColor;
                 [more addTarget:self action:@selector(more:) forControlEvents:UIControlEventTouchUpInside];
                 more.enabled = YES;
                 more.frame = CGRectMake(totalWidth, 0, kMoreWidth, self.maxSize.height-_arrowSize.height);
-                UIImage *image = [[self class] createTriangleImageWithSize:CGSizeMake(kTriangleWidth, kTriangleHeight) tintColor:nil isRight:YES];
+                UIImage *image = [[self class] createTriangleImageWithSize:CGSizeMake(kTriangleWidth, kTriangleHeight) tintColor:  self.menuTintColor isRight:YES];
                 [more setImage:image forState:UIControlStateNormal];
                 [self.contentView addSubview:more];
                 
                 
                 if (idx != 0) {
                     UIView *line = [UIView new];
-                    line.backgroundColor = [UIColor whiteColor];
+                    line.backgroundColor =   self.menuTintColor ?:[UIColor whiteColor];
                     [self addSubview:line];
                     line.frame = CGRectMake(totalWidth, 0, 1/[UIScreen mainScreen].scale, self.maxSize.height-_arrowSize.height);
                     [self.lines addObject:line];
@@ -228,7 +236,8 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
             item.frame = CGRectMake(totalWidth-itemW, 0, itemW, self.maxSize.height-_arrowSize.height);
             [item setTitle:obj.title forState:UIControlStateNormal];
             item.titleLabel.font =self.container.menuItemFont;
-            [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [item setTitleColor:   self.menuTintColor?:[UIColor whiteColor] forState:UIControlStateNormal];
+            item.highlightedColor = self.container.menuItemHighlightColor;
             [self.contentView addSubview:item];
             if (obj.image) {
                 item.imagePosition = self.container.imagePosition;
@@ -237,7 +246,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
             
             if (idx != 0) {
                 UIView *line = [UIView new];
-                line.backgroundColor = [UIColor whiteColor];
+                line.backgroundColor =   self.menuTintColor?:[UIColor whiteColor];
                 [self addSubview:line];
                 line.frame = CGRectMake(totalWidth-itemW, 0, 1/[UIScreen mainScreen].scale, self.maxSize.height-_arrowSize.height);
                 [self.lines addObject:line];
@@ -247,8 +256,8 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
     if (needResetLayout) {
         self.frame = (CGRect){{0,0},{totalWidth,self.maxSize.height}};
         self.contentView.frame = (CGRect){{0,0},{totalWidth,self.maxSize.height-_arrowSize.height}};
-        [self setCorrectDirection:_CorrectDirection];
     }
+     [self setCorrectDirection:_CorrectDirection];
     self.totalCount = index;
     [self.pageCounts addObject:@(self.totalCount)];
 }
@@ -275,12 +284,13 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         GMenuItemDefaultView *moreleft = [GMenuItemDefaultView buttonWithType:UIButtonTypeCustom];
         [moreleft addTarget:self action:@selector(forward:) forControlEvents:UIControlEventTouchUpInside];
         moreleft.frame = CGRectMake(0, 0, kMoreWidth, self.maxSize.height-_arrowSize.height);
-        UIImage *image = [[self class] createTriangleImageWithSize:CGSizeMake(kTriangleWidth, kTriangleHeight) tintColor:nil isRight:NO];
+        UIImage *image = [[self class] createTriangleImageWithSize:CGSizeMake(kTriangleWidth, kTriangleHeight) tintColor:  self.menuTintColor isRight:NO];
         [moreleft setImage:image forState:UIControlStateNormal];
         [self.contentView addSubview:moreleft];
-
+        moreleft.highlightedColor = self.container.menuItemHighlightColor;
+        
         UIView *line = [UIView new];
-        line.backgroundColor = [UIColor whiteColor];
+        line.backgroundColor =   self.menuTintColor?: [UIColor whiteColor];
         [self addSubview:line];
         line.frame = CGRectMake(kMoreWidth, 0, 1/[UIScreen mainScreen].scale, self.maxSize.height-_arrowSize.height);
         [self.lines addObject:line];
@@ -337,7 +347,8 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         item.frame = CGRectMake(lastWidth, 0, itemW, self.maxSize.height-_arrowSize.height);
         [item setTitle:obj.title forState:UIControlStateNormal];
         item.titleLabel.font = self.container.menuItemFont;
-        [item setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+         item.highlightedColor = self.container.menuItemHighlightColor;
+        [item setTitleColor:  self.menuTintColor?:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.contentView addSubview:item];
         if (obj.image) {
             item.imagePosition = self.container.imagePosition;
@@ -348,7 +359,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         
         if (idx != 0) {
             UIView *line = [UIView new];
-            line.backgroundColor = [UIColor whiteColor];
+            line.backgroundColor =  self.menuTintColor?: [UIColor whiteColor];
             [self addSubview:line];
             line.frame = CGRectMake(lastWidth-itemW, 0, 1/[UIScreen mainScreen].scale, self.maxSize.height-_arrowSize.height);
             [self.lines addObject:line];
@@ -362,7 +373,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         GMenuItemDefaultView *moreRight = [GMenuItemDefaultView buttonWithType:UIButtonTypeCustom];
         [moreRight addTarget:self action:@selector(more:) forControlEvents:UIControlEventTouchUpInside];
         moreRight.frame = CGRectMake(self.frame.size.width-kMoreWidth, 0, kMoreWidth, self.maxSize.height-_arrowSize.height);
-        
+         moreRight.highlightedColor = self.container.menuItemHighlightColor;
         
         if (self.totalCount ==  self.menuItems.count) {
             moreRight.enabled = NO;
@@ -375,7 +386,7 @@ static inline BOOL GMenuHasContainingInRange(CGFloat index,NSRange range) {
         
         
         UIView *line = [UIView new];
-        line.backgroundColor = [UIColor whiteColor];
+        line.backgroundColor =   self.menuTintColor?:[UIColor whiteColor];
         [self addSubview:line];
         line.frame = CGRectMake(self.frame.size.width-kMoreWidth, 0, 1/[UIScreen mainScreen].scale,self.maxSize.height-_arrowSize.height);
         [self.lines addObject:line];

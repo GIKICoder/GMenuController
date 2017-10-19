@@ -111,7 +111,9 @@
 - (IBAction)btn6:(UIButton*)sender {
     
     [GMenuController sharedMenuController].arrowDirection = GMenuControllerArrowDown;
-    
+    [GMenuController sharedMenuController].menuViewContainer.fillColor = [UIColor lightGrayColor];
+    [GMenuController sharedMenuController].menuViewContainer.menuItemTintColor = [UIColor blackColor];
+    [GMenuController sharedMenuController].menuViewContainer.menuItemHighlightColor = [UIColor colorWithWhite:3 alpha:0.7];
     [[GMenuController sharedMenuController] setMenuItems:self.arr4];
     [[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
     [[GMenuController sharedMenuController] setMenuVisible:YES];

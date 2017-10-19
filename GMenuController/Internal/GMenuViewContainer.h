@@ -18,6 +18,11 @@
 @property(nonatomic, strong) GMenuDefaultView *menuView;
 
 /**
+ menuView 填充颜色 Defulat:[UIColor colorWithRed:26/255 green:26/288 blue:27/255 alpha:1]
+ */
+@property (nonatomic, strong) UIColor  *fillColor;
+
+/**
  menuView 圆角
  */
 @property(nonatomic, assign) CGFloat cornerRadius;
@@ -44,7 +49,16 @@
 @property (nonatomic, strong) UIFont * menuItemFont;
 
 /**
- menu高度 Defalut:45.34f
+ menuItemColor Default:whiteColor
+ */
+@property (nonatomic, strong) UIColor * menuItemTintColor;
+
+/**
+ menuItemHighlightColor Default:lightGaryColor
+ */
+@property (nonatomic, strong) UIColor * menuItemHighlightColor;
+/**
+ menu高度 Default:45.34f
  */
 @property (nonatomic, assign) CGFloat  menuViewHeight;
 
