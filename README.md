@@ -13,6 +13,8 @@ GMenuController
 ==============
 - API与UIMenuController一致.
 - 支持MenuItem指定target.使用更加灵活
+- 支持显示图标加文字menu.图标可自定义位置
+- 支持更改menuview 外观设置
 - 无需对添加MenuController的控件 添加canBecomeFirstResponder等行为.
 - 相比UIMenuController. GMenuController具有更加简单,友好的使用方式.
 
