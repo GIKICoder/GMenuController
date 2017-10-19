@@ -20,7 +20,7 @@ GMenuController
 ==============
 
 ### 基本用法
-```objc
+```objc 
 // GMenuController (和 UIMenuController 用法一致)
 GMenuItem *item1 = [[GMenuItem alloc] initWithTitle:@"选择" target:self action:@selector(test)];
 GMenuItem *item2 = [[GMenuItem alloc] initWithTitle:@"复制" target:self action:@selector(test)];
@@ -35,10 +35,28 @@ self.arr = @[item1,item2,item3,item4,item5];
 
 ```
 
+```objc 
+///带有图片的menuView. 可指定图片位置
+GMenuItem *item1 = [[GMenuItem alloc] initWithTitle:@"选择" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+GMenuItem *item2 = [[GMenuItem alloc] initWithTitle:@"复制" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+GMenuItem *item3 = [[GMenuItem alloc] initWithTitle:@"全选" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+GMenuItem *item4= [[GMenuItem alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+GMenuItem *item5 = [[GMenuItem alloc] initWithTitle:@"更多" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"可以有多个文字,行为与系统menuview完全一致" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+NSArray* arr1 = @[item1,item2,item3,item4,item5,item6];
+    
+GMenuController.sharedMenuController.menuViewContainer.imagePosition = GAdjustButtonIMGPositionBottom;
+GMenuController.sharedMenuController.menuViewContainer.menuViewHeight = 65;
+[[GMenuController sharedMenuController] setMenuItems:arr1];
+[[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
+[[GMenuController sharedMenuController] setMenuVisible:YES];
+```
+
 ### Demo
 
-<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo0.gif" width="320">
-
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo4.gif" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo5.png" width="320">
+<img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo6.png" width="320">
 <img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/selectCopy.png" width="400">
 <img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/novelReader.png" width="400">
 
