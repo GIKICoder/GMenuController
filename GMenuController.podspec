@@ -24,11 +24,10 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "A MenuView similar to UIMenuController. With a more flexible use of the way. Can customize the appearance. xxx "
 
   s.homepage     = "https://github.com/GIKICoder/GMenuController/blob/master/README.md"
-  s.screenshots  = "https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo4.gif"
+  #s.screenshots  = "https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo4.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
