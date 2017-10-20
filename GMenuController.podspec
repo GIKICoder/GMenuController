@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GMenuController"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "A MenuView similar to UIMenuController. With a more flexible use of the way. Can customize the appearance."
 
   # This description is used to generate tags and improve search results.
@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    DESC
 
-  s.homepage     = "http://EXAMPLE/GMenuController"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.homepage     = "https://github.com/GIKICoder/GMenuController/blob/master/README.md"
+  s.screenshots  = "https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo4.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/GMenuController.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/GIKICoder/GMenuController.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
