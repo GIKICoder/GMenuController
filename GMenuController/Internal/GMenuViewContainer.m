@@ -268,10 +268,10 @@ static inline CGPoint GMenuGetXCenter(CGRect rect) {
 - (CGPoint)calculateAnchorPoint:(CGRect)targetRect menuViewSize:(CGSize)size
 {
     CGPoint centerPoint = GMenuGetXCenter(targetRect);
-    if (centerPoint.x < 0 && centerPoint.x > GMenuScreenWidth) {
+    if (centerPoint.x < 0 || centerPoint.x > GMenuScreenWidth) {
         centerPoint.x = GMenuScreenWidth/2;
     }
-    if (centerPoint.y < 0 && centerPoint.y > GMenuScreenHeight) {
+    if (centerPoint.y < 0 || centerPoint.y > GMenuScreenHeight) {
         centerPoint.y = GMenuScreenHeight/2;
     }
     CGPoint targetPoint = CGPointMake(centerPoint.x, centerPoint.y);
