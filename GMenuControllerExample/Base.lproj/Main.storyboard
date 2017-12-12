@@ -98,14 +98,14 @@
                                 <rect key="frame" x="8" y="78" width="351" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31326605343734182" green="0.17151625424441275" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="默认menuView">
+                                <state key="normal" title="默认menuView,点击空白区域不隐藏menuview.">
                                     <color key="titleColor" red="0.040337597150259086" green="0.0085449612166487079" blue="0.012569190077702644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="btn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Rf-71-v79"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="默认点击空白区域隐藏menuview.如果需要.请设置[GMenuController sharedMenuController].menuViewContainer.hasAutoHide = NO;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-Wz-9yc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="默认点击空白区域隐藏menuview.如果需要不自动hide.请设置[GMenuController sharedMenuController].menuViewContainer.hasAutoHide = NO;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-Wz-9yc">
                                 <rect key="frame" x="8" y="444" width="359" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
