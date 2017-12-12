@@ -44,6 +44,7 @@
     [[GMenuController sharedMenuController] setMenuItems:self.arr1];
     [[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
     [[GMenuController sharedMenuController] setMenuVisible:YES];
+    [GMenuController sharedMenuController].menuViewContainer.hasAutoHide = NO;
     
 }
 - (IBAction)btn2:(UIButton*)sender {
@@ -119,11 +120,20 @@
     [[GMenuController sharedMenuController] setMenuVisible:YES];
 }
 
-- (IBAction)jumpController:(id)sender {
-    GWebViewController * vc = [[GWebViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+- (IBAction)jumpController:(UIButton*)sender {
+//    GWebViewController * vc = [[GWebViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:@"test" action:@selector(test)];
+    UIMenuController *controller = [UIMenuController sharedMenuController];
+    controller.menuItems = @[item];
+    [controller setTargetRect:sender.frame inView:self.view];
+    [controller setMenuVisible:YES animated:YES];
 }
 
+- (BOOL)resignFirstResponder
+{
+    return YES;
+}
 - (void)test{
     
     [[GMenuController sharedMenuController] setMenuVisible:NO];
