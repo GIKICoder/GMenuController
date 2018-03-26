@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GMenuController.h"
 #import "GWebViewController.h"
+#import "GTableTableViewController.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSArray  *arr1;
 @property (nonatomic, strong) NSArray  *arr2;
@@ -26,7 +27,7 @@
     GMenuItem *item3 = [[GMenuItem alloc] initWithTitle:@"全选" target:self action:@selector(test)];
     GMenuItem *item4= [[GMenuItem alloc] initWithTitle:@"收藏" target:self action:@selector(test)];
     GMenuItem *item5 = [[GMenuItem alloc] initWithTitle:@"更多" target:self action:@selector(test)];
-    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"可以有多个文字,行为与系统menuview完全一致" target:self action:@selector(test)];
+    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"文字" target:self action:@selector(test)];
     self.arr1 = @[item1,item2,item3];
     self.arr2 = @[item6,item3,item2,item1];
     self.arr3 = @[item1,item2,item3,item4,item5];
@@ -54,7 +55,7 @@
     GMenuItem *item3 = [[GMenuItem alloc] initWithTitle:@"全选" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     GMenuItem *item4= [[GMenuItem alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     GMenuItem *item5 = [[GMenuItem alloc] initWithTitle:@"更多" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
-    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"可以有多个文字,行为与系统menuview完全一致" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"搜索" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     NSArray* arr1 = @[item1,item2,item3,item4,item5,item6];
     [[GMenuController sharedMenuController] setMenuItems:arr1];
     [[GMenuController sharedMenuController] setTargetRect:sender.frame inView:self.view];
@@ -99,7 +100,7 @@
     GMenuItem *item3 = [[GMenuItem alloc] initWithTitle:@"全选" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     GMenuItem *item4= [[GMenuItem alloc] initWithTitle:@"收藏" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     GMenuItem *item5 = [[GMenuItem alloc] initWithTitle:@"更多" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
-    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"可以有多个文字,行为与系统menuview完全一致" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
+    GMenuItem *item6 = [[GMenuItem alloc] initWithTitle:@"文字" image:[UIImage imageNamed:@"star"] target:self action:@selector(test)];
     NSArray* arr1 = @[item1,item2,item3,item4,item5,item6];
     
     GMenuController.sharedMenuController.menuViewContainer.imagePosition = GAdjustButtonIMGPositionBottom;
@@ -138,5 +139,8 @@
     
     [[GMenuController sharedMenuController] setMenuVisible:NO];
     
+}
+- (IBAction)DetailPageClick:(id)sender {
+    [self.navigationController pushViewController:[GTableTableViewController new] animated:YES];
 }
 @end

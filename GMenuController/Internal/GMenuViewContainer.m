@@ -41,6 +41,11 @@ static inline CGPoint GMenuGetXCenter(CGRect rect) {
     return self;
 }
 
+- (void)dealloc
+{
+    //NSLog(@"GMenuController Dealloc~");
+}
+
 - (void)initConfigs
 {
     self.hasAutoHide = YES;

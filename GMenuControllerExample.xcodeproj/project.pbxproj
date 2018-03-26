@@ -23,6 +23,7 @@
 		2BF020471F8E56BA00D4A5CA /* GMenuDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020411F8E56BA00D4A5CA /* GMenuDefaultView.m */; };
 		2BF020481F8E56BA00D4A5CA /* GMenuEffectsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020431F8E56BA00D4A5CA /* GMenuEffectsWindow.m */; };
 		2BF020491F8E56BA00D4A5CA /* GMenuViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020451F8E56BA00D4A5CA /* GMenuViewContainer.m */; };
+		2BF5B44920689F4100212B22 /* GTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B44820689F4100212B22 /* GTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		2BF020431F8E56BA00D4A5CA /* GMenuEffectsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuEffectsWindow.m; sourceTree = "<group>"; };
 		2BF020441F8E56BA00D4A5CA /* GMenuViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMenuViewContainer.h; sourceTree = "<group>"; };
 		2BF020451F8E56BA00D4A5CA /* GMenuViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuViewContainer.m; sourceTree = "<group>"; };
+		2BF5B44720689F4100212B22 /* GTableTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableTableViewController.h; sourceTree = "<group>"; };
+		2BF5B44820689F4100212B22 /* GTableTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				2BF0200D1F8E56A200D4A5CA /* AppDelegate.m */,
 				2BF0200F1F8E56A200D4A5CA /* ViewController.h */,
 				2BF020101F8E56A200D4A5CA /* ViewController.m */,
+				2BF5B44720689F4100212B22 /* GTableTableViewController.h */,
+				2BF5B44820689F4100212B22 /* GTableTableViewController.m */,
 				2B08935A1F98B08F0073946D /* GWebViewController.h */,
 				2B08935B1F98B0900073946D /* GWebViewController.m */,
 				2B0893601F98B66A0073946D /* GWKWebView.h */,
@@ -341,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF5B44920689F4100212B22 /* GTableTableViewController.m in Sources */,
 				2B08935C1F98B0900073946D /* GWebViewController.m in Sources */,
 				2B0893341F98912D0073946D /* GAdjustButton.m in Sources */,
 				2BF020461F8E56BA00D4A5CA /* GMenuController.m in Sources */,
