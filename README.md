@@ -148,8 +148,8 @@ Demo
 <img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo4.gif" width="320">
 <img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo5.png" width="320">
 <img src="https://github.com/GIKICoder/GMenuController/blob/master/snapshot/demo6.png" width="320">
-<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/selectCopy.png" width="400">
-<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/novelReader.png" width="400">
+<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/001.png" width="400">
+<img src="https://github.com/GIKICoder/GRichLabel/blob/master/screenshot/002.png" width="400">
 
 
 
