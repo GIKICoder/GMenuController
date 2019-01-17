@@ -36,11 +36,15 @@
             inst.userInteractionEnabled = NO;
             inst.windowLevel = UIWindowLevelStatusBar + 1;
             inst.hidden = NO;
-            
+            // bugFix: https://github.com/GIKICoder/GMenuController/issues/9
+            UIViewController * vc = [[UIViewController alloc] init];
+            inst.rootViewController = vc;
+            vc.view.frame = CGRectZero;
             // for iOS 9:
             inst.opaque = NO;
             inst.backgroundColor = [UIColor clearColor];
             inst.layer.backgroundColor = [UIColor clearColor].CGColor;
+        
     });
     return inst;
 }
