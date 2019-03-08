@@ -54,6 +54,7 @@
     if(!menu) return;
     menu.alpha = 0;
     if(menu.superview != self) [self addSubview:menu];
+    self.menuVisible = YES;
     self.currentMenu = menu;
     [self updateWindowLevel];
     
@@ -76,6 +77,7 @@
 
 - (void)hideMenu:(GMenuViewContainer *)menu
 {
+    self.menuVisible = NO;
     if (!menu) return;
     if (menu.superview != self) return;
     [menu initConfigs];

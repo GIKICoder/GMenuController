@@ -16,9 +16,7 @@ NSNotificationName  const GMenuControllerDidHideMenuNotification= @"GMenuControl
 NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenuControllerMenuFrameDidChangeNotification_private";
 
 @interface GMenuController()
-{
-    BOOL _showMenu;
-}
+
 @property (nonatomic, strong,readwrite) GMenuViewContainer * menuViewContainer;
 @property (nonatomic, weak) UIView * targetView;
 @end
@@ -51,7 +49,7 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
 
 - (BOOL)isMenuVisible
 {
-    return _showMenu;
+    return [GMenuEffectsWindow sharedWindow].isMenuVisible;
 }
 
 - (void)setMenuVisible:(BOOL)menuVisible
@@ -61,7 +59,6 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
 
 - (void)setMenuVisible:(BOOL)menuVisible animated:(BOOL)animated
 {
-    _showMenu = menuVisible;
     if (menuVisible) {
         [[NSNotificationCenter defaultCenter] postNotificationName:GMenuControllerWillShowMenuNotification object:nil];
         [self showMenuWithAnimated:animated];

@@ -11,6 +11,8 @@
 @class GMenuViewContainer;
 @interface GMenuEffectsWindow : UIWindow
 
+@property(nonatomic,getter=isMenuVisible) BOOL menuVisible;        // default is NO
+
 + (instancetype)sharedWindow;
 
 - (void)showMenu:(GMenuViewContainer *)menu animation:(BOOL)animation;
