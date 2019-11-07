@@ -51,13 +51,25 @@
 
 - (void)showMenu:(GMenuViewContainer *)menu animation:(BOOL)animation
 {
-    if(!menu) return;
+    if (!menu) return;
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
+    if (@available(iOS 13.0, *)) {
+        for (UIWindowScene *scene in [UIApplication sharedApplication].connectedScenes) {
+            if (scene.activationState == UISceneActivationStateForegroundActive) {
+                self.windowScene = scene;
+                break;
+            }
+        }
+    }
+#endif
+
     menu.alpha = 0;
     if(menu.superview != self) [self addSubview:menu];
     self.menuVisible = YES;
     self.currentMenu = menu;
     [self updateWindowLevel];
-    
+
     if (animation) {
         NSTimeInterval time =  0.16;
         [UIView animateWithDuration:time delay:0 options:UIViewAnimationOptionCurveEaseInOut  animations:^{
