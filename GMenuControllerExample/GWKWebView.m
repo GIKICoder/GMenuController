@@ -7,7 +7,8 @@
 //
 
 #import "GWKWebView.h"
-#import "GMenuController.h"
+#import <GMenuController/GMenuController.h>
+
 @implementation GWKWebView
 
 - (BOOL)canPerformAction:(SEL)action withSender:(UIMenuController*)sender

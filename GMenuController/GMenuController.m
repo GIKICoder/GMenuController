@@ -9,17 +9,13 @@
 #import "GMenuController.h"
 #import "GMenuEffectsWindow.h"
 #import "GMenuViewContainer.h"
+#import "GMenuController_internal.h"
+
 NSNotificationName  const GMenuControllerWillShowMenuNotification = @"GMenuControllerWillShowMenuNotification_private";
 NSNotificationName  const GMenuControllerDidShowMenuNotification= @"GMenuControllerDidShowMenuNotification_private";
 NSNotificationName  const GMenuControllerWillHideMenuNotification= @"GMenuControllerWillHideMenuNotification_private";
 NSNotificationName  const GMenuControllerDidHideMenuNotification= @"GMenuControllerDidHideMenuNotification_private";
 NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenuControllerMenuFrameDidChangeNotification_private";
-
-@interface GMenuController()
-
-@property (nonatomic, strong,readwrite) GMenuViewContainer * menuViewContainer;
-@property (nonatomic, weak) UIView * targetView;
-@end
 
 @implementation GMenuController
 
@@ -29,7 +25,7 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
 {
     self = [super init];
     if (self) {
-
+        _menuViewContainer = [GMenuViewContainer new];
     }
     return self;
 }
@@ -107,13 +103,6 @@ NSNotificationName  const GMenuControllerMenuFrameDidChangeNotification= @"GMenu
     self.menuViewContainer.arrowDirection = arrowDirection;
 }
 
-- (GMenuViewContainer *)menuViewContainer
-{
-    if (!_menuViewContainer) {
-        _menuViewContainer = [GMenuViewContainer new];
-    }
-    return _menuViewContainer;
-}
 @end
 
 @implementation GMenuItem

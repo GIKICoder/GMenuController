@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0893341F98912D0073946D /* GAdjustButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0893321F98912D0073946D /* GAdjustButton.m */; };
+		153D51742373F80A009B9653 /* GMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153D51712373F7F9009B9653 /* GMenuController.framework */; };
 		2B08935C1F98B0900073946D /* GWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B08935B1F98B0900073946D /* GWebViewController.m */; };
 		2B08935F1F98B3EC0073946D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B08935E1F98B3EC0073946D /* WebKit.framework */; };
 		2B0893621F98B66A0073946D /* GWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0893611F98B66A0073946D /* GWKWebView.m */; };
@@ -19,14 +19,24 @@
 		2BF020191F8E56A200D4A5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF020171F8E56A200D4A5CA /* LaunchScreen.storyboard */; };
 		2BF020241F8E56A200D4A5CA /* GMenuControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020231F8E56A200D4A5CA /* GMenuControllerExampleTests.m */; };
 		2BF0202F1F8E56A200D4A5CA /* GMenuControllerExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0202E1F8E56A200D4A5CA /* GMenuControllerExampleUITests.m */; };
-		2BF020461F8E56BA00D4A5CA /* GMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0203E1F8E56BA00D4A5CA /* GMenuController.m */; };
-		2BF020471F8E56BA00D4A5CA /* GMenuDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020411F8E56BA00D4A5CA /* GMenuDefaultView.m */; };
-		2BF020481F8E56BA00D4A5CA /* GMenuEffectsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020431F8E56BA00D4A5CA /* GMenuEffectsWindow.m */; };
-		2BF020491F8E56BA00D4A5CA /* GMenuViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF020451F8E56BA00D4A5CA /* GMenuViewContainer.m */; };
 		2BF5B44920689F4100212B22 /* GTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5B44820689F4100212B22 /* GTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		153D51702373F7F9009B9653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 153D516C2373F7F9009B9653 /* GMenuController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 153D515D2373F497009B9653;
+			remoteInfo = GMenuController;
+		};
+		153D51722373F803009B9653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 153D516C2373F7F9009B9653 /* GMenuController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 153D515C2373F497009B9653;
+			remoteInfo = GMenuController;
+		};
 		2BF020201F8E56A200D4A5CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BF01FFE1F8E56A200D4A5CA /* Project object */;
@@ -44,9 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B0893321F98912D0073946D /* GAdjustButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAdjustButton.m; sourceTree = "<group>"; };
-		2B0893331F98912D0073946D /* GAdjustButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAdjustButton.h; sourceTree = "<group>"; };
-		2B0893351F989F020073946D /* GMenuControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMenuControllerHeader.h; sourceTree = "<group>"; };
+		153D516C2373F7F9009B9653 /* GMenuController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GMenuController.xcodeproj; sourceTree = "<group>"; };
 		2B08935A1F98B08F0073946D /* GWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWebViewController.h; sourceTree = "<group>"; };
 		2B08935B1F98B0900073946D /* GWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWebViewController.m; sourceTree = "<group>"; };
 		2B08935E1F98B3EC0073946D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -68,14 +76,6 @@
 		2BF0202A1F8E56A200D4A5CA /* GMenuControllerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMenuControllerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF0202E1F8E56A200D4A5CA /* GMenuControllerExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMenuControllerExampleUITests.m; sourceTree = "<group>"; };
 		2BF020301F8E56A200D4A5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BF0203D1F8E56BA00D4A5CA /* GMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMenuController.h; sourceTree = "<group>"; };
-		2BF0203E1F8E56BA00D4A5CA /* GMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuController.m; sourceTree = "<group>"; };
-		2BF020401F8E56BA00D4A5CA /* GMenuDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMenuDefaultView.h; sourceTree = "<group>"; };
-		2BF020411F8E56BA00D4A5CA /* GMenuDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuDefaultView.m; sourceTree = "<group>"; };
-		2BF020421F8E56BA00D4A5CA /* GMenuEffectsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMenuEffectsWindow.h; sourceTree = "<group>"; };
-		2BF020431F8E56BA00D4A5CA /* GMenuEffectsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuEffectsWindow.m; sourceTree = "<group>"; };
-		2BF020441F8E56BA00D4A5CA /* GMenuViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMenuViewContainer.h; sourceTree = "<group>"; };
-		2BF020451F8E56BA00D4A5CA /* GMenuViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMenuViewContainer.m; sourceTree = "<group>"; };
 		2BF5B44720689F4100212B22 /* GTableTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTableTableViewController.h; sourceTree = "<group>"; };
 		2BF5B44820689F4100212B22 /* GTableTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153D51742373F80A009B9653 /* GMenuController.framework in Frameworks */,
 				2B08935F1F98B3EC0073946D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153D516D2373F7F9009B9653 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				153D51712373F7F9009B9653 /* GMenuController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2B08935D1F98B3EB0073946D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +126,7 @@
 		2BF01FFD1F8E56A200D4A5CA = {
 			isa = PBXGroup;
 			children = (
-				2BF0203C1F8E56BA00D4A5CA /* GMenuController */,
+				153D516C2373F7F9009B9653 /* GMenuController.xcodeproj */,
 				2BF020081F8E56A200D4A5CA /* GMenuControllerExample */,
 				2BF020221F8E56A200D4A5CA /* GMenuControllerExampleTests */,
 				2BF0202D1F8E56A200D4A5CA /* GMenuControllerExampleUITests */,
@@ -184,32 +193,6 @@
 			path = GMenuControllerExampleUITests;
 			sourceTree = "<group>";
 		};
-		2BF0203C1F8E56BA00D4A5CA /* GMenuController */ = {
-			isa = PBXGroup;
-			children = (
-				2BF0203D1F8E56BA00D4A5CA /* GMenuController.h */,
-				2BF0203E1F8E56BA00D4A5CA /* GMenuController.m */,
-				2B0893351F989F020073946D /* GMenuControllerHeader.h */,
-				2BF0203F1F8E56BA00D4A5CA /* Internal */,
-			);
-			path = GMenuController;
-			sourceTree = "<group>";
-		};
-		2BF0203F1F8E56BA00D4A5CA /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				2B0893331F98912D0073946D /* GAdjustButton.h */,
-				2B0893321F98912D0073946D /* GAdjustButton.m */,
-				2BF020401F8E56BA00D4A5CA /* GMenuDefaultView.h */,
-				2BF020411F8E56BA00D4A5CA /* GMenuDefaultView.m */,
-				2BF020421F8E56BA00D4A5CA /* GMenuEffectsWindow.h */,
-				2BF020431F8E56BA00D4A5CA /* GMenuEffectsWindow.m */,
-				2BF020441F8E56BA00D4A5CA /* GMenuViewContainer.h */,
-				2BF020451F8E56BA00D4A5CA /* GMenuViewContainer.m */,
-			);
-			path = Internal;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +207,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				153D51732373F803009B9653 /* PBXTargetDependency */,
 			);
 			name = GMenuControllerExample;
 			productName = GMenuControllerExample;
@@ -299,12 +283,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 2BF01FFD1F8E56A200D4A5CA;
 			productRefGroup = 2BF020071F8E56A200D4A5CA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 153D516D2373F7F9009B9653 /* Products */;
+					ProjectRef = 153D516C2373F7F9009B9653 /* GMenuController.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2BF020051F8E56A200D4A5CA /* GMenuControllerExample */,
@@ -313,6 +304,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		153D51712373F7F9009B9653 /* GMenuController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GMenuController.framework;
+			remoteRef = 153D51702373F7F9009B9653 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2BF020041F8E56A200D4A5CA /* Resources */ = {
@@ -348,13 +349,8 @@
 			files = (
 				2BF5B44920689F4100212B22 /* GTableTableViewController.m in Sources */,
 				2B08935C1F98B0900073946D /* GWebViewController.m in Sources */,
-				2B0893341F98912D0073946D /* GAdjustButton.m in Sources */,
-				2BF020461F8E56BA00D4A5CA /* GMenuController.m in Sources */,
-				2BF020491F8E56BA00D4A5CA /* GMenuViewContainer.m in Sources */,
-				2BF020481F8E56BA00D4A5CA /* GMenuEffectsWindow.m in Sources */,
 				2BF020111F8E56A200D4A5CA /* ViewController.m in Sources */,
 				2BF0200E1F8E56A200D4A5CA /* AppDelegate.m in Sources */,
-				2BF020471F8E56BA00D4A5CA /* GMenuDefaultView.m in Sources */,
 				2BF0200B1F8E56A200D4A5CA /* main.m in Sources */,
 				2B0893621F98B66A0073946D /* GWKWebView.m in Sources */,
 			);
@@ -379,6 +375,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		153D51732373F803009B9653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GMenuController;
+			targetProxy = 153D51722373F803009B9653 /* PBXContainerItemProxy */;
+		};
 		2BF020211F8E56A200D4A5CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BF020051F8E56A200D4A5CA /* GMenuControllerExample */;
