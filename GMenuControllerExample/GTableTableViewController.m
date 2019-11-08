@@ -7,7 +7,8 @@
 //
 
 #import "GTableTableViewController.h"
-#import "GMenuController.h"
+#import <GMenuController/GMenuController.h>
+
 @interface GTableTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end

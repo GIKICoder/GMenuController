@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "GMenuController.h"
+#import <GMenuController/GMenuController.h>
 #import "GWebViewController.h"
 #import "GTableTableViewController.h"
 @interface ViewController ()
